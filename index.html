@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/18c9ad9ad8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <button class="shop-box" onclick="openCart()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p id="cartQuantity">0</p>
+      </button>
+    </header>
+
+    <section class="container">
+      <div class="cards">
+        <div class="card-left">
+          <div class="left-card-side">
+            <h1>GIFT CARD</h1>
+            <h2>buy any package as a gift for your friend</h2>
+          </div>
+          <div class="right-card-side">
+            <p>38 - 900 CHF</p>
+            <button class="button">
+              <i class="fa-solid fa-arrow-right"></i> &nbsp;&nbsp; GO TO SHOP
+            </button>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="left-card-side">
+            <h1>PRIVATE CLASS</h1>
+            <h2>organize a workout for you and your friends!</h2>
+          </div>
+          <div class="right-card-side">
+            <p>120 - 450 CHF</p>
+            <button class="button">
+              <i class="fa-solid fa-arrow-right"></i> &nbsp;&nbsp; SEE SCHEDULE
+            </button>
+            <a href="#">check the price</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container single-credit">
+      <!-- cards from js here-->
+    </section>
+
+    <section class="cart-popup" id="popup">
+      <div class="head-modal">
+        <h1 class="dark-bg">YOUR CART</h1>
+        <button name="close" class="close-popup" onclick="closeCart()">
+          &#x2715;
+        </button>
+      </div>
+      <div class="scrolling-table">
+        <table>
+          <thead>
+            <tr class="sticky">
+              <td class="main-text-table">description</td>
+              <td class="main-text-table">price</td>
+              <td class="main-text-table">quantity</td>
+              <td class="main-text-table">total</td>
+            </tr>
+          </thead>
+          <tbody class="load-cart" id="cart-table">
+            <!-- products from js here -->
+          </tbody>
+        </table>
+      </div>
+      <p class="main-text-table">total price</p>
+      <h1 id="sum-price">0 CHF</h1>
+      <div class="btn-center">
+        <button class="button">CHECKOUT</button>
+      </div>
+    </section>
+
+    <div class="productPopup" id="productPopup">
+      <div class="new-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>New item in cart</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
